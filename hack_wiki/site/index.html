@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#linux-commands" class="nav-link">linux commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="linux-commands">linux commands</h1>
+<p>this commands for archlinux,
+not for other linux</p>
+<h3 id="about-files-and-dirt">about files and dirt</h3>
+<ul>
+<li><strong>CD</strong>
+다른 디렉토리로 이동할때 사용함.</li>
+</ul>
+<pre><code class="language-shell">cd &lt;path&gt;
+</code></pre>
+<p>예시</p>
+<pre><code class="language-shell">cd ./kim/workspace
+</code></pre>
+<hr />
+<ul>
+<li><strong>ls</strong> 
+현재 디렉토리안의 플더와 파일들을 출력함</li>
+</ul>
+<pre><code class="language-shell">ls
+#아래와 같은 결과가 나온다
+Desktop  Documents  Downloads  Games  Music  Pictures  Public  Templates  Unity  Videos  yay
+</code></pre>
+<hr />
+<ul>
+<li><strong>mkdir</strong></li>
+</ul>
+<pre><code class="language-shell">mkdir &lt;name&gt;
+</code></pre>
+<hr />
+<ul>
+<li><strong>rm</strong>
+디렉토리나 파일을 삭제한다</li>
+</ul>
+<pre><code class="language-shell">rm &lt;path&gt;
+
+#아래와같이 사용할수있다
+rm ./kim/workspace
+rm ./kim/python_test.py
+</code></pre>
+<hr />
+<ul>
+<li><strong>cp</strong> 
+파일이나 디렉토리를 복사하여 다른 디렉토리에 저장한다</li>
+</ul>
+<pre><code class="language-shell">#첫번째 경로에는 복사할 디렉토리나 파일을 입력하고 두번째 경로에는 복사될 디렉토리를 입력하면 된다
+cp &lt;path&gt; &lt;path&gt;
+
+cp ./kim/workspace ./kim/zsh
+</code></pre>
+<hr />
+<ul>
+<li><strong>pwd</strong>
+현재 자신이 있는 디렉토리의 경로를 출력한다</li>
+</ul>
+<pre><code class="language-shell">pwd
+/home/kim
+</code></pre>
+<hr />
+<h3 id="about-system">about system</h3>
+<ul>
+<li><strong>cat</strong>
+파일의 내용을 출력한다</li>
+</ul>
+<pre><code class="language-shell">cat &lt;path&gt;
+</code></pre>
+<hr />
+<ul>
+<li><strong>sudo</strong>
+관리자권한(root)으로 뒤에 오는 명령을 실행한다</li>
+</ul>
+<pre><code class="language-shell">sudo &lt;command&gt;
+#아래와같이 쓸수있대
+sudo cd /home/usr/share/icons
+</code></pre>
+<p>해석하면 원래 편집권한이 없는 플더에 접근하는 것이다</p>
+<hr />
+<ul>
+<li><strong>top</strong>
+현재 실행중인 상위 프로세서를 출력한다</li>
+</ul>
+<pre><code class="language-shell">top
+</code></pre>
+<pre><code class="language-shell">Tasks: 379 total, 1 running, 374 sleep, 2 d-sleep, 0 stopped, 2 zombie
+%Cpu(s):  0.8 us,  0.8 sy,  0.0 ni, 98.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15916.5 total,    427.9 free,   6957.3 used,   9227.0 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   8959.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                
+ 143479 kim       20   0 1394.2g 789440 168224 S  28.0   4.8  67:35.60 chrome                                 
+ 168339 kim       20   0   12504   9492   7248 R   9.3   0.1   0:00.01 top                                    
+      1 root      20   0   23060  12380   7892 S   0.0   0.1   0:24.03 systemd                                
+</code></pre>
+<hr />
+<ul>
+<li><strong>who</strong>
+컴퓨터에 접속한 유저들을 출력한다</li>
+</ul>
+<pre><code class="language-shell">who
+</code></pre>
+<pre><code class="language-shell">kim      tty2         2025-10-26 07:09 (:0)
+kim      pts/0        2025-10-26 07:09 (:0)
+kim      pts/1        2025-10-26 20:45 (:0)
+</code></pre>
+<hr />
+<ul>
+<li><strong>w</strong>
+현재 활동하는 유저와 유저에 정보를 출력한다</li>
+</ul>
+<pre><code class="language-shell">w
+</code></pre>
+<pre><code class="language-shell">20:45:27 up 13:36,  1 user,  load average: 2.42, 2.61, 2.88
+USER     TTY       LOGIN@   IDLE   JCPU   PCPU  
+kim      tty2      07:09   11:17m  9:23   0.02s 
+</code></pre>
+<hr />
+<ul>
+<li><strong>poweroff</strong>
+전원끄는거</li>
+</ul>
+<pre><code class="language-shell">poweroff
+</code></pre>
+<hr />
+<ul>
+<li><strong>reboot</strong>
+재부팅하는거</li>
+</ul>
+<pre><code class="language-shell">reboot
+</code></pre>
+<hr />
+<ul>
+<li><strong>pacman</strong>
+프로그램 설치하는 명령어</li>
+</ul>
+<pre><code class="language-shell">pacman &lt;operation&gt; [...]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">operation</th>
+<th style="text-align: left;">discraption</th>
+<th style="text-align: left;">use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">-S</td>
+<td style="text-align: left;">install program</td>
+<td style="text-align: left;">pacman -S \<package></td>
+</tr>
+<tr>
+<td style="text-align: left;">-Ss</td>
+<td style="text-align: left;">found program</td>
+<td style="text-align: left;">pacman -Ss \<package></td>
+</tr>
+<tr>
+<td style="text-align: left;">-Syu</td>
+<td style="text-align: left;">updata repo</td>
+<td style="text-align: left;">pacman -Syu \<package></td>
+</tr>
+<tr>
+<td style="text-align: left;">-Rns</td>
+<td style="text-align: left;">remove program</td>
+<td style="text-align: left;">pacman -Rns \<package></td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-10-26 12:24:23.954035+00:00
+-->

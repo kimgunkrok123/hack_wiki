@@ -1,4 +1,24 @@
-site_name: My Docs
+site_name: Learn_
+repo_url: https://kimgunkrok123.github.io/hack_wiki/
+repo_name: kimgunkrok123/hack_wiki
 theme:
   name: material
   language : ko
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+plugins:
+  - search
+  - social
+  - tags
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://kimgunkrok123.github.io/hack_wiki/
